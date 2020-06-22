@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+main{
+    height: 100vh;
+    width:100vw;
+    background-image:url('./bg-intro-desktop.png');
+    background-color:hsl(0, 100%, 74%) ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Poppins',sans-serif;
+    padding:150px;
+}
+
+.flexContainer{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+section{
+    // border:1px solid black;
+    color:white;
+    width:40vw;
+    padding-top:150px;
+    // padding-left: 30px;
+}
+
+.formContainer{
+    // border:1px solid black;
+    height:75vh;
+    width:35vw;
+}
+
+
+
+h1{
+    font-size:45px;
+    padding-right:80px;
+    line-height:1.2;
+}
+
+.description{
+    margin-top:20px;
+    font-weight:400;
+    font-size:15px;
+    padding-right:100px;
+    line-height: 1.8;
+}
+
+form{
+    background:white;
+    border-radius:10px;
+    padding-top:20px;
+    text-align: center;
+    box-shadow: 5px 5px 20px -10px hsl(249, 10%, 26%) ;
+}
+
+input{
+    width:85%;
+    margin: 20px auto 0;
+    height:55px;
+    border-radius:5px;
+    border:1px solid hsl(246, 25%, 77%);
+    display:block;
+    background:url(icon-error.svg) no-repeat 95%;
+}
+
+.submitButton{
+    width: 85%;
+    margin: 20px auto 0;
+    display:block;
+    height:55px;
+    background:hsl(154, 59%, 51%);
+    border-radius:5px;
+    border:none;
+    font-family:'Poppins',sans-serif;
+    color:white;
+    font-weight:600;
+    box-shadow: 5px 5px 20px -10px hsl(249, 10%, 26%) ;
+    &:hover{
+       background: hsl(154, 55%, 65%);
+    }
+    &:focus {outline:0;}
+}
+
+.trialButton{
+    width: 100%;
+    margin: 0 auto 20px;
+    display:block;
+    height:55px;
+    background: hsl(248, 32%, 49%);
+    border: none;
+    border-radius:10px;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    box-shadow: 5px 5px 20px -10px hsl(249, 10%, 26%) ;
+    font-weight:600;
+    span{
+        font-weight:100;
+    }
+}
+
+.terms{
+    font-size:10px;
+    margin-top:10px;
+    color:hsl(246, 25%, 77%);
+    padding-bottom:30px;
+    span{
+        color:hsl(0, 100%, 74%);
+        font-weight: 700;
+    }
+}
+
+::placeholder{
+    font-family: 'Poppins',sans-serif;
+    padding-left: 20px;
+    font-weight:700;
+}
+
+.errorAlert{
+    font-size:10px;
+    color:hsl(0, 100%, 74%);
+    text-align: right;
+    padding-right:40px;
+    font-weight:500;
+    padding-top:5px;
+}
+
+@media only screen and(max-width:375px){
+   body{
+    
+    main{
+   background-image:url('./bg-intro-mobile.png');
+   height:130vh;
+    }
+    section{
+    width:90vw;
+    padding-top:0;
+    }
+    .formContainer{
+        width:90vw;
+        height:60%;
+    }
+    section{
+        text-align: center;
+        padding-top:0;
+        h1{
+            font-size:30px;
+            padding:0 40px;
+            line-height:1.2;
+        }
+
+        .description{
+        margin-top:20px;
+        font-weight:400;
+        font-size:14px;
+        padding-right:0;
+        line-height: 1.8;
+        }
+    }
+    .trialButton{
+        height:80px;
+        margin-top:60px;
+        padding: 0 80px;
+        font-weight:700;
+    }
+    .submitButton{
+        height:60px;
+        font-size: 16px;
+        font-weight:500;
+        box-shadow: 2px 2px 20px -10px hsl(249, 10%, 26%) ;
+    }
+    input{
+        height:60px;
+        margin:10px auto 0;
+    }
+    form{
+        .terms{
+            padding:0 60px 30px;
+        }
+    }
+}
+}
+
